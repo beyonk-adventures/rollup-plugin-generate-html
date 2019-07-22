@@ -354,6 +354,6 @@ module.exports = { "default": keys$1, __esModule: true };
 
 var _Object$keys = unwrapExports(keys);
 
-var cheerio=require('cheerio');function plugin(config){var filename=config.filename,publicPath=config.publicPath,template=config.template;return{name:'generate-html',generateBundle:function generateBundle(options,bundle){var file=_Object$keys(bundle)[0];var parsedPath=parse(file);var htmlPath=resolve(publicPath,filename);var src=publicPath?'/'+relative(publicPath,file):'./'+parsedPath.name+parsedPath.ext;var $=cheerio.load(template?readFileSync(template).toString():'');var body=$('body');var script='<script type="module" src="'+src+'"></script>\n';body.append(script);writeFileSync(htmlPath,$.html());}}}
+var cheerio=require('cheerio');function plugin(config){var filename=config.filename,publicPath=config.publicPath,template=config.template;return{name:'generate-html-es',generateBundle:function generateBundle(options,bundle){var file=_Object$keys(bundle)[0];var parsedPath=parse(file);var htmlPath=resolve(publicPath,filename);var src=publicPath?'/'+relative(publicPath,file):'./'+parsedPath.name+parsedPath.ext;var $=cheerio.load(template?readFileSync(template).toString():'');var body=$('body');var script='<script type="module" src="'+src+'"></script>\n';body.append(script);writeFileSync(htmlPath,$.html());}}}
 
 export default plugin;
