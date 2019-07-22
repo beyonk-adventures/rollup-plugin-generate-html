@@ -26,7 +26,7 @@ export default function plugin (config) {
       const script = `<script type="module" src="${src}"></script>\n`
       body.append(script)
 
-      fs.writeFileSync(htmlPath, $.html())
+      fs.writeFileSync(htmlPath, $.html(), { flag: 'w' })
     }
   }
 }
