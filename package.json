@@ -1,6 +1,6 @@
 {
   "name": "@beyonk/rollup-plugin-html-esm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generates html for modular ECMAScript",
   "main": "dist/rollup-plugin-generate-html.cjs.js",
   "module": "dist/rollup-plugin-generate-html.esm.js",
