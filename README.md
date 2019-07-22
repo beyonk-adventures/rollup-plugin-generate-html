@@ -1,4 +1,4 @@
-# rollup-plugin-generate-html
+# @beyonk/rollup-plugin-generate-html-esm
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com) [![CircleCI](https://circleci.com/gh/beyonk-adventures/rollup-plugin-html-es.svg?style=shield)](https://circleci.com/gh/beyonk-adventures/rollup-plugin-html-es)
 
@@ -8,13 +8,13 @@ This plugin is inspired from [rollup-plugin-generate-html](https://github.com/ze
 ## Installation
 
 ```bash
-npm install --save-dev @beyonk/rollup-plugin-html-es
+npm install --save-dev @beyonk/rollup-plugin-html-esm
 ```
 
 ## Usage
 
 ```js
-import html from '@beyonk/rollup-plugin-html-es'
+import html from '@beyonk/rollup-plugin-html-esm'
 
 export default [{
   input: 'main.js',
