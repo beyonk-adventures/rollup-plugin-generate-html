@@ -8,7 +8,7 @@ This plugin is inspired from [rollup-plugin-generate-html](https://github.com/ze
 ## Installation
 
 ```bash
-npm install --save-dev @beyonk/rollup-plugin-html-es
+npm install --save-dev @beyonk/rollup-plugin-html-esm
 ```
 
 ## Usage
