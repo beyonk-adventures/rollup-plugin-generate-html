@@ -1,20 +1,20 @@
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import babel from 'rollup-plugin-babel';
-import pkg from './package.json';
+import resolve from 'rollup-plugin-node-resolve'
+import commonjs from 'rollup-plugin-commonjs'
+import babel from 'rollup-plugin-babel'
+import pkg from './package.json'
 
 const plugins = [
   resolve(),
   babel({ runtimeHelpers: true, exclude: 'node_modules/**' }), // need to strip flow first
-  commonjs(),
-];
+  commonjs()
+]
 
 export default [{
   input: './index.js',
   external: ['fs', 'path'],
   output: [
     { file: pkg.main, format: 'cjs' },
-    { file: pkg.module, format: 'es' },
+    { file: pkg.module, format: 'es' }
   ],
-  plugins,
-}];
+  plugins
+}]

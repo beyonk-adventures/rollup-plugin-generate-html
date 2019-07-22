@@ -5,12 +5,11 @@ import * as path from 'path'
 const cheerio = require('cheerio')
 
 export default function plugin (config) {
-  const { filename, publicPath, template} = config
+  const { filename, publicPath, template } = config
 
   return {
-    name: 'generate-html',
+    name: 'generate-html-es',
     generateBundle (options, bundle) {
-      console.log(Object.keys(bundle))
       const file = Object.keys(bundle)[0]
       const parsedPath = path.parse(file)
       const htmlPath = path.resolve(publicPath, filename)
@@ -24,7 +23,7 @@ export default function plugin (config) {
         : '')
 
       const body = $('body')
-      const script = `<script type="text/javascript" src="${src}"></script>\n`
+      const script = `<script type="module" src="${src}"></script>\n`
       body.append(script)
 
       fs.writeFileSync(htmlPath, $.html())

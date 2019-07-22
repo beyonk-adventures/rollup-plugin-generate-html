@@ -1,7 +1,7 @@
 module.exports = {
   parser: 'babel-eslint',
-  extends: 'airbnb-base',
-  plugins: ['import', 'flowtype'],
+  extends: '@beyonk/eslint-config',
+  plugins: ['import'],
   env: {
     node: true,
     jest: true,
